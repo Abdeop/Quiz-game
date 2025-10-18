@@ -78,4 +78,20 @@ body{
     padding: 1rem;
     cursor: pointer;
     text-align: left;
+    transition: all 0.4s;}
+
+.answer-btn:hover{
+    opacity: 80%;
+    background-color: hsl(209, 100%, 96%);
+    border-color: gainsboro;
+}
+.answer-btn.correct{
+    background-color: #e6ff60;
+    color: #28a745;
+    border-color: #a3f0c4;
+}
+.answer-btn.incorrect{
+    background-color: #fff0f0;
+    color: #dc3545;
+    border-color: #ffbdbd;
 }
