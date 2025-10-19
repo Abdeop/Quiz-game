@@ -41,7 +41,12 @@ body{
     color: hsl(235, 80%, 70%);
     margin-bottom: 20px;
     font-size: 2.5rem;
-    text-align: center;
+}
+
+#start-screen p{
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 
 .quiz-header{
@@ -94,4 +99,60 @@ body{
     background-color: #fff0f0;
     color: #dc3545;
     border-color: #ffbdbd;
+}
+
+.progress-bar{
+    height: 10px;
+    background-color: #e5eef8;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress{
+    height: 100%;
+    background-color: hsl(235, 80%, 70%);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* RESULT SCREEN */
+
+#result-screen h1{
+    color: hsl(235, 80%, 70%);
+    margin-bottom: 30px;
+}
+
+.result-info{
+    background-color: #e5eef8;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.result-info p {
+    font-size: 1.2rem;
+    background-color: #333;
+    margin-bottom: 1rem;
+}
+
+#result-message{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: hsl(235, 80%, 70%);
+}
+
+button{
+    background-color: hsl(235, 80%, 70%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+button:hover{
+    background-color: hsl(235, 86%, 60%);
 }
