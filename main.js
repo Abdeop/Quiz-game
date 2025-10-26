@@ -14,6 +14,8 @@ const resultMessage = document.getElementById("result-message")
 const restartButton = document.getElementById("restart-btn")
 const progressBar = document.getElementById("progress")
 
+// ARRAYS
+
 const quizQuestions = [
   {
     question: "What is the capital of France?",
@@ -61,3 +63,22 @@ const quizQuestions = [
     ],
   },
 ];
+
+    // QUIZ STATE VARS;
+  let currentQuestionIndex = 0;
+  let score = 0;
+  let answersDisabled = false;
+
+  totalquestionsSpan.textContent = quizQuestions.length
+  maxScoreSpan.textContent = quizQuestions.lenght
+
+    // EVENT LISTENERS;
+    startButton.addEventListener("click", startQuiz)
+    restartButton.addEventListener("click", restartQuiz)
+
+    function startQuiz(){
+      console.log("Quiz started")
+    }
+    function restartQuiz(){
+      console.log("Quiz restarted")
+    }
