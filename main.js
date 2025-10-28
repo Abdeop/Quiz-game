@@ -106,8 +106,24 @@ const quizQuestions = [
         button.textContent = answer.text
 
         button.classList.add("answer-btn")
+          // What is a DataSet ? it's a property of the button element that allow us to store custom datas;
+        button.dataset.correct = answer.correct
+
+        button.addEventListener("click",selectAnswer)
+        answersContainer.appendChild(button)
       })
     }
+
+    function selectAnswer (event) {
+      // optimization check
+      if (answersDisabled) return
+
+      answersDisabled = true
+
+      const selectedButton = event.target;
+      const isCorrect = selectedButton.dataset.correct === "true"
+    }
+
 
     function restartQuiz(){
       console.log("Quiz restarted")
