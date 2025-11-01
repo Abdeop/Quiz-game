@@ -148,7 +148,28 @@ const quizQuestions = [
       })
     }
 
-    function showResults(){}
+    function showResults(){
+      quizScreen.classList.remove("active")
+      quizScreen.classList.add("active")
+
+      finalScoreSpan.textContent = score
+      const percentage = (score/quizQuestions.lenght) * 100
+      if(percentage===100) {
+        resultMessage.textContent = "Perfect you are a genius!"
+      }
+     else if(percentage >=80) {
+        resultMessage.textContent = "God job, you know your stuff"
+      }
+     else if(percentage >=50) {
+        resultMessage.textContent = "Good efforts keep learning!"
+      }
+     else if(percentage >=30) {
+        resultMessage.textContent = "It's okay keep going!"
+      }
+     else {
+        resultMessage.textContent = "It's okay on the next time"
+      }
+    }
 
 
     function restartQuiz(){
